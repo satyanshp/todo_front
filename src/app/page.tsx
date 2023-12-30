@@ -80,7 +80,7 @@ export default function Home() {
           Tasks Todo
         </code>
       </header>
-      <button className={styles.button} onClick={()=>{setAddTask(true)}}>+ Add Task</button>
+      <button className={styles.button} onClick={()=>{setAddTask(true);setValues(initialValue);}}>+ Add Task</button>
       <section className={styles.grid}>
         {tasks?.map((item,index)=>(
           <div className={`${styles.card}`} key={`card-${index}`}>
