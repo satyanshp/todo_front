@@ -52,7 +52,6 @@ export default function Home() {
     setValues({task:data.task, status:data.status});
   };
   const handleEditSave = async() => {
-    console.log("update",values);
     await axios.patch(
       `https://todo-back-7wzv.onrender.com/api/v1/tasks/update`,
       {
@@ -73,7 +72,6 @@ export default function Home() {
     setFetchData(!fetchData);
   };
   const handleColor = (type:string) => {
-    console.log(type);
     if(type === "Pending"){
       return "pending";
     }
