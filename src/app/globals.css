@@ -100,6 +100,33 @@ a {
   text-decoration: none;
 }
 
+.pending{
+  background-color: rgba(227, 0, 34, 0.1);
+  border: 1px solid rgba(227, 0, 34, 0.8);
+}
+
+.pending h2{
+  color: rgba(227, 0, 34, 1);
+}
+
+.inprogress{
+  background-color: rgba(241, 198, 55, 0.1);
+  border: 1px solid rgba(254, 233, 44, 0.8);
+}
+
+.inprogress h2{
+  color: rgba(254, 233, 44, 1);
+}
+
+.completed{
+  background-color: rgba(96, 172, 84, 0.1);
+  border: 1px solid rgba(74, 180, 40, 0.8);
+}
+
+.completed h2{
+  color: rgba(74, 180, 40, 1);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

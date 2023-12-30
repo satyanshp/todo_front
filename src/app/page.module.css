@@ -155,8 +155,8 @@
   width: 49%;
   position: relative;
   margin: 0;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  /* background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3); */
   border-radius: var(--border-radius);
   height: auto;
 }
@@ -223,11 +223,6 @@
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
   .card:hover span {
     transform: translateX(4px);
   }

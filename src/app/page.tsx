@@ -72,6 +72,19 @@ export default function Home() {
     );
     setFetchData(!fetchData);
   };
+  const handleColor = (type:string) => {
+    console.log(type);
+    if(type === "Pending"){
+      return "pending";
+    }
+    else if(type === "InProgress"){
+      return 'inProgress';
+    }
+    else{
+      return 'completed';
+    }
+  }
+
 
   return (
     <main className={styles.main}>
@@ -83,7 +96,7 @@ export default function Home() {
       <button className={styles.button} onClick={()=>{setAddTask(true);setValues(initialValue);}}>+ Add Task</button>
       <section className={styles.grid}>
         {tasks?.map((item,index)=>(
-          <div className={`${styles.card}`} key={`card-${index}`}>
+          <div className={`${styles.card} ${handleColor(item.status)}`} key={`card-${index}`}>
             <div>
               <h2>
                 {item.task}
