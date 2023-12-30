@@ -109,12 +109,12 @@ a {
   color: rgba(227, 0, 34, 1);
 }
 
-.inprogress{
+.inProgress{
   background-color: rgba(241, 198, 55, 0.1);
   border: 1px solid rgba(254, 233, 44, 0.8);
 }
 
-.inprogress h2{
+.inProgress h2{
   color: rgba(254, 233, 44, 1);
 }
 

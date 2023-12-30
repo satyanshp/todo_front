@@ -77,7 +77,7 @@ export default function Home() {
     if(type === "Pending"){
       return "pending";
     }
-    else if(type === "InProgress"){
+    else if(type === "Inprogress"){
       return 'inProgress';
     }
     else{
