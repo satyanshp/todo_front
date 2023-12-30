@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () =>{
       try {
-        const {data: response} = await axios.get('http://localhost:8080/api/v1/tasks');
+        const {data: response} = await axios.get('https://todo-back-blue.vercel.app/api/v1/tasks');
         setTasks(response.data);
         console.log(response.data);
       } catch (error) {
@@ -31,7 +31,7 @@ export default function Home() {
   const [editMode, setEditMode] = useState(false);
   const handleSubmit = async() => {
     await axios.post(
-      `http://localhost:8080/api/v1/tasks/create`,
+      `https://todo-back-blue.vercel.app/api/v1/tasks/create`,
       {
         task:values.task,
         status:values.status
@@ -54,7 +54,7 @@ export default function Home() {
   const handleEditSave = async() => {
     console.log("update",values);
     await axios.patch(
-      `http://localhost:8080/api/v1/tasks/update`,
+      `https://todo-back-blue.vercel.app/api/v1/tasks/update`,
       {
         ID:getID,
         task:values.task,
@@ -65,7 +65,7 @@ export default function Home() {
   };
   const handleDeleteSave = async(index:number) => {
     await axios.post(
-      `http://localhost:8080/api/v1/tasks/delete`,
+      `https://todo-back-blue.vercel.app/api/v1/tasks/delete`,
       {
         ID:index
       }
